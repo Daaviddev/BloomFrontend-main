@@ -1,0 +1,39 @@
+.buttonWrapperStyle {
+}
+
+.buttonContainerStyle {
+}
+
+.headButtonStyle {
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    line-height: 30px;
+    text-align: center;
+    background: linear-gradient(to bottom, #7611f7 5%, #7d3252 100%);
+    background-color: #7611f7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.headButtonStyle:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7d3252), color-stop(1, #7611f7));
+    background: -moz-linear-gradient(top, #7d3252 5%, #7611f7 100%);
+    background: -webkit-linear-gradient(top, #7d3252 5%, #7611f7 100%);
+    background: -o-linear-gradient(top, #7d3252 5%, #7611f7 100%);
+    background: -ms-linear-gradient(top, #7d3252 5%, #7611f7 100%);
+    background: linear-gradient(to bottom, #7d3252 5%, #7611f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#7611f7',GradientType=0);
+    background-color: #7d3252;
+}
+.headButtonStyle:active {
+    position: relative;
+    top: 1px;
+}
+
+.connect-button-progress {
+    margin-left: 10px;
+    margin-top: 4px;
+}

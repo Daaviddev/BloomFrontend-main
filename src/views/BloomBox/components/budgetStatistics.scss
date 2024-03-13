@@ -1,0 +1,66 @@
+.dashboardStyle {
+    text-align: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.totalBudget {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+}
+
+.totalBudgetNumber {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+}
+
+.peChart {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.peChartWrapper {
+    position: relative;
+    cursor: default;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    /* height: 150px; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dollarSign {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+}
+
+.textInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalBudgetNumber {
+    color: #ff4861;
+    font-size: 35px;
+    line-height: 34px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.panel_title {
+    display: flex;
+    justify-content: flex-start;
+}

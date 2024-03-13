@@ -1,0 +1,1088 @@
+{
+	"abi": [
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "from",
+			  "type": "address"
+			},
+			{
+			  "indexed": true,
+			  "internalType": "address[]",
+			  "name": "receivers",
+			  "type": "address[]"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256[]",
+			  "name": "airdrops",
+			  "type": "uint256[]"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "timestamp",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "AirdropNCTR",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "addr",
+			  "type": "address"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "amount",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "Claim",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "addr",
+			  "type": "address"
+			},
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "from",
+			  "type": "address"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "amountNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "amountUsce",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "CompoundRewardFrom",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "addr",
+			  "type": "address"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "amount",
+			  "type": "uint256"
+			},
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "token",
+			  "type": "address"
+			}
+		  ],
+		  "name": "Deposit",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "addr",
+			  "type": "address"
+			},
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "from",
+			  "type": "address"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "amountNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "amountUsce",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "DepositRewardFrom",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "upline",
+			  "type": "address"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "address[]",
+			  "name": "downline",
+			  "type": "address[]"
+			}
+		  ],
+		  "name": "DownlineUpdated",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": false,
+			  "internalType": "uint8",
+			  "name": "version",
+			  "type": "uint8"
+			}
+		  ],
+		  "name": "Initialized",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "previousOwner",
+			  "type": "address"
+			},
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "newOwner",
+			  "type": "address"
+			}
+		  ],
+		  "name": "OwnershipTransferred",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "addr",
+			  "type": "address"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "amount",
+			  "type": "uint256"
+			},
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "token",
+			  "type": "address"
+			}
+		  ],
+		  "name": "Reward",
+		  "type": "event"
+		},
+		{
+		  "anonymous": false,
+		  "inputs": [
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "teamLead",
+			  "type": "address"
+			},
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "teamMember",
+			  "type": "address"
+			},
+			{
+			  "indexed": false,
+			  "internalType": "uint256",
+			  "name": "amount",
+			  "type": "uint256"
+			},
+			{
+			  "indexed": true,
+			  "internalType": "address",
+			  "name": "token",
+			  "type": "address"
+			}
+		  ],
+		  "name": "TeamReward",
+		  "type": "event"
+		},
+		{
+		  "inputs": [],
+		  "name": "USDCeToken",
+		  "outputs": [
+			{
+			  "internalType": "contract ERC20Upgradeable",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address[]",
+			  "name": "_receivers",
+			  "type": "address[]"
+			},
+			{
+			  "internalType": "uint256[]",
+			  "name": "_airdrops",
+			  "type": "uint256[]"
+			}
+		  ],
+		  "name": "airdrop",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "name": "airdrops",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "airdropsGiven",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "airdropsReceived",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "lastAirdropTime",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_user",
+			  "type": "address"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_dailyClaimAmount",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "changeAirdropsGiven",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_user",
+			  "type": "address"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_lastActionTime",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "changeLastActionTime",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_user",
+			  "type": "address"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_nextActionTime",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "changeNextActionTime",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_user",
+			  "type": "address"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_payout",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "changePayouts",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "claim",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "claimTax",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "compoundRewards",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "compoundTax",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "_amountUSDCe",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "address",
+			  "name": "_upline",
+			  "type": "address"
+			}
+		  ],
+		  "name": "deposit",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "depositTax",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "devWalletAddressNCTR",
+		  "outputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "devWalletAddressUSDCe",
+		  "outputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "name": "downlineRewardTracker",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "compoundDownlineNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "compoundDownlineeUSDCe",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "depositDownlineNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "depositDownlineeUSDCe",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_user",
+			  "type": "address"
+			}
+		  ],
+		  "name": "getDepositedValue",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_user",
+			  "type": "address"
+			}
+		  ],
+		  "name": "getPendingReward",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_user",
+			  "type": "address"
+			}
+		  ],
+		  "name": "getUserDownlines",
+		  "outputs": [
+			{
+			  "internalType": "address[]",
+			  "name": "",
+			  "type": "address[]"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_tierNFTAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "_nectarTokenAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "_USDCeTokenAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "_treasuryAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "_routerAddress",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "_devWalletAddressNCTR",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "_devWalletAddressUSDCe",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "_liquidityManagerAddress",
+			  "type": "address"
+			}
+		  ],
+		  "name": "initialize",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "liquidityManagerAddress",
+		  "outputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "nectarToken",
+		  "outputs": [
+			{
+			  "internalType": "contract INectar",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "owner",
+		  "outputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "pairAddress",
+		  "outputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "renounceOwnership",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "router",
+		  "outputs": [
+			{
+			  "internalType": "contract IBloomexRouter02",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_pairAddress",
+			  "type": "address"
+			}
+		  ],
+		  "name": "setPairAddress",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_router",
+			  "type": "address"
+			}
+		  ],
+		  "name": "setRouterAddress",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "teamWalletDownlineRewardPerc",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "tierNFT",
+		  "outputs": [
+			{
+			  "internalType": "contract ERC1155Upgradeable",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "totalAirdrops",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "totalDepositedNCTR",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "totalDepositedUSDCe",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "totalUsers",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "totalWithdraw",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "newOwner",
+			  "type": "address"
+			}
+		  ],
+		  "name": "transferOwnership",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [],
+		  "name": "treasury",
+		  "outputs": [
+			{
+			  "internalType": "contract ITreasuryUpgradeable",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "_teamLeader",
+			  "type": "address"
+			}
+		  ],
+		  "name": "updateAPR",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "_newClaimTax",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "updateClaimTax",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "_compoundBurnPercNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_compoundUplinePercNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_compoundUplinePercUSDCe",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "updateCompoundDistributionPercentages",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "_newCompoundTax",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "updateCompoundTax",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "_depositBurnPercNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_depositFlowerPercNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_depositLpPercNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_depositLpPercUSDCe",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "_depositTreasuryPercUSDCe",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "updateDepositDistributionPercentages",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "_newDepositTax",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "updateDepositTax",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "_teamWalletDownlineRewardPerc",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "updateTeamWalletDownlineRewardPerc",
+		  "outputs": [],
+		  "stateMutability": "nonpayable",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "name": "userCompoundRewards",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "name": "userDownlines",
+		  "outputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "name": "userDownlinesIndex",
+		  "outputs": [
+			{
+			  "internalType": "uint256",
+			  "name": "",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		},
+		{
+		  "inputs": [
+			{
+			  "internalType": "address",
+			  "name": "",
+			  "type": "address"
+			}
+		  ],
+		  "name": "users",
+		  "outputs": [
+			{
+			  "internalType": "address",
+			  "name": "walletUSDCe",
+			  "type": "address"
+			},
+			{
+			  "internalType": "address",
+			  "name": "upline",
+			  "type": "address"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "depositsNCTR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "depositsUSDCe",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "lastDepositTime",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "APR",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "payouts",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "dailyClaimAmount",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "uplineRewardTracker",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "lastActionTime",
+			  "type": "uint256"
+			},
+			{
+			  "internalType": "uint256",
+			  "name": "nextActionTime",
+			  "type": "uint256"
+			}
+		  ],
+		  "stateMutability": "view",
+		  "type": "function"
+		}
+	  ]
+}

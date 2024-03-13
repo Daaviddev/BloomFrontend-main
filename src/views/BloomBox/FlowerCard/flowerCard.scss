@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "flower";
+    src: url("../../../assets/fonts/flower.ttf");
+}
+@font-face {
+    font-family: "flowerLove";
+    src: url("../../../assets/fonts/flowerLove.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap");
+
+.cardContainer {
+    max-width: 4000px !important;
+    overflow: hidden;
+    margin: 3%;
+    padding: 2%;
+    background: linear-gradient(60.97deg, transparent, 90%, #7611f7 100%);
+    box-shadow: 5px 5px 20px #7611f7;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+
+    @media (max-width: 600px) {
+        margin-bottom: 10%;
+        padding: 5%;
+    }
+
+    .cardRow {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .flowerCard {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        border: 1px solid #7611f7;
+    }
+
+    .flowerContent {
+        display: flex;
+        flex-wrap: row wrap;
+    }
+
+    .card-title {
+        margin: 0px;
+        font-family: Rubik, "Open Sans";
+        font-weight: 600;
+        line-height: 2;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+
+        display: grid;
+        justify-content: start;
+    }
+
+    .left {
+        flex: 0 0 30%;
+        margin: 1%;
+        @media (max-width: 900px) {
+            flex-basis: 100%;
+            -webkit-box-flex: 0;
+            flex-grow: 0;
+            max-width: 100%;
+        }
+    }
+    .center {
+        flex: 0 0 30%;
+        margin: 1%;
+        @media (max-width: 900px) {
+            flex-basis: 100%;
+            -webkit-box-flex: 0;
+            flex-grow: 0;
+            max-width: 100%;
+        }
+    }
+
+    .right {
+        flex: 0 0 30%;
+        margin: 1%;
+        @media (max-width: 900px) {
+            flex-basis: 100%;
+            -webkit-box-flex: 0;
+            flex-grow: 0;
+            max-width: 100%;
+        }
+    }
+
+    .textRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+
+        @media (max-width: 900px) {
+            padding: 2%;
+            padding-right: 5%;
+        }
+
+        @media (max-width: 600px) {
+            padding: 2%;
+            padding-right: 5%;
+        }
+    }
+
+    .card-value {
+        margin: 0px;
+        font-family: Rubik, "Open Sans";
+        font-weight: 600;
+        line-height: 2;
+        color: rgba(255, 255, 255, 1);
+        font-size: 20px;
+        display: grid;
+        justify-content: center;
+    }
+}
+
+.flowerButtonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.flowerButtonContainer {
+    width: 100%;
+    height: 90%;
+    justify-content: center;
+    min-width: 40px;
+    display: flex;
+}
+
+.nestedButton {
+    display: flex;
+}
+
+.flower-name {
+    font-family: "Libre Baskerville";
+    font-weight: 100;
+    font-size: 35px;
+    color: whitesmoke;
+    text-transform: uppercase;
+}
+
+.flower-image {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.dashboard__card-widget {
+    justify-content: space-between;
+    @media (max-width: 900px) {
+        padding: 0.5rem;
+    }
+}
+
+.dashboard__card-widget1 {
+    justify-content: space-around;
+    @media (max-width: 900px) {
+        padding: 0.5rem;
+    }
+}
